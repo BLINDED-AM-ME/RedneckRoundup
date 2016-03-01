@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - spr_redneck
+  - spr_ship
+  - obj_abductionPoint
+  - blocker
+  - spr_ship
+  - btn_facebook
+  - btn_help
+  - btn_gameCenter
+  - img_bestScoreBoard
+  - img_mainMenu
+  - btn_play
+  - img_blackness
+  - img_gameOverMenu
+  - btn_goHome
+  - txt_score-gameOver
+  - txt_bestScore-gameOver
+  - btn_pause
+  - img_scoreBoard
+  - txt_score
+  - img_countdownTimer
+  - spr_barn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - blockerLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3342696607
+    locked: 0
+  - name: shadows
+    uniqueID: 3424371791
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

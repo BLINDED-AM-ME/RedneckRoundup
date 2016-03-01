@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: cb4db719d2aa743299f11219db50ffe4
+timeCreated: 1451931993
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: farmer-boundry_background
+    21300002: farmer-boundry_foreground
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    sprites:
+    - name: farmer-boundry_background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 1765
+        height: 944
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -130, y: 182.72797}
+        - {x: -82, y: 155.72797}
+        - {x: 66, y: 183.72797}
+        - {x: 107, y: 153.72797}
+        - {x: 259, y: 185.72797}
+        - {x: 298, y: 157.72797}
+        - {x: 465, y: 190.72797}
+        - {x: 450, y: 99.72797}
+        - {x: 470, y: -273.27203}
+        - {x: 495, y: -273.27203}
+        - {x: 507, y: -156.27203}
+        - {x: 505, y: 0.7279663}
+        - {x: 512, y: 18.727966}
+        - {x: 512, y: 212.72797}
+        - {x: 499, y: 274.72797}
+        - {x: 456, y: 274.72797}
+        - {x: 273, y: 260.72797}
+        - {x: 104, y: 263.72797}
+        - {x: -82, y: 260.72797}
+        - {x: -120, y: 274.72797}
+        - {x: -295, y: 274.72797}
+        - {x: -310, y: 272.72797}
+        - {x: -317, y: 245.72797}
+        - {x: -498, y: 262.72797}
+        - {x: -512, y: 153.72797}
+        - {x: -512, y: -273.27203}
+        - {x: -478, y: -273.27203}
+        - {x: -445, y: -217.27203}
+        - {x: -468, y: 192.72797}
+        - {x: -288, y: 171.72797}
+    - name: farmer-boundry_foreground
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1765
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 470, y: 35.5}
+        - {x: 462, y: 20.5}
+        - {x: 324, y: 35.5}
+        - {x: 275, y: 35.5}
+        - {x: 270, y: 27.5}
+        - {x: 161, y: 35.5}
+        - {x: -18, y: 35.5}
+        - {x: -72, y: 32.5}
+        - {x: -78, y: 35.5}
+        - {x: -121, y: 35.5}
+        - {x: -123, y: 21.5}
+        - {x: -273, y: 20.5}
+        - {x: -274, y: 35.5}
+        - {x: -315, y: 35.5}
+        - {x: -323, y: 32.5}
+        - {x: -444, y: 35.5}
+        - {x: -498, y: 35.5}
+        - {x: -502, y: 30.5}
+        - {x: -502, y: -35.5}
+        - {x: 500, y: -35.5}
+        - {x: 500, y: 35.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
