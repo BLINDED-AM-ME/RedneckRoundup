@@ -7,121 +7,58 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LoadingBar
-  m_Shader: {fileID: 4800000, guid: fed039a152d4c43ed85d86af28e2e06f, type: 3}
+  m_Shader: {fileID: 4800000, guid: e5a5f9bfa45164e9492ef0b065ec2cb1, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION
   m_LightmapFlags: 1
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Stencil
-        second:
-          m_Texture: {fileID: 2800000, guid: 0b39c05048a334248b4ae571c29130e7, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: -0.39999998, y: 0}
-      data:
-        first:
-          name: _Tex1
-        second:
-          m_Texture: {fileID: 2800000, guid: 77b8defb604d440f1875834d4f303417, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Tex2
-        second:
-          m_Texture: {fileID: 2800000, guid: 15d50ee7415f94c1694785ee2453c48d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _AlphaMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+    - _AlphaMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 77b8defb604d440f1875834d4f303417, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 15d50ee7415f94c1694785ee2453c48d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stencil:
+        m_Texture: {fileID: 2800000, guid: 0b39c05048a334248b4ae571c29130e7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.5, y: 0}
+    - _Tex1:
+        m_Texture: {fileID: 2800000, guid: 77b8defb604d440f1875834d4f303417, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex2:
+        m_Texture: {fileID: 2800000, guid: 15d50ee7415f94c1694785ee2453c48d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _Stencil
-        second: 0
-      data:
-        first:
-          name: _StencilComp
-        second: 8
-      data:
-        first:
-          name: _StencilOp
-        second: 0
-      data:
-        first:
-          name: _StencilReadMask
-        second: 255
-      data:
-        first:
-          name: _StencilWriteMask
-        second: 255
-      data:
-        first:
-          name: _ColorMask
-        second: 15
-      data:
-        first:
-          name: _UseUIAlphaClip
-        second: 0
-      data:
-        first:
-          name: _Glossiness
-        second: 0.5
-      data:
-        first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _Fade1
-        second: 1
-      data:
-        first:
-          name: _Fade2
-        second: 1
-      data:
-        first:
-          name: _Lightup1
-        second: 1
-      data:
-        first:
-          name: _Lightup2
-        second: 1
-      data:
-        first:
-          name: _Cut
-        second: 0.5
+    - _ColorMask: 15
+    - _Cut: 0.5
+    - _Fade1: 1
+    - _Fade2: 1
+    - _Glossiness: 0.5
+    - _Lightup1: 1
+    - _Lightup2: 1
+    - _Metallic: 0
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
     m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Color1
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Color2
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Specular
-        second: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 0, g: 0, b: 0, a: 0}

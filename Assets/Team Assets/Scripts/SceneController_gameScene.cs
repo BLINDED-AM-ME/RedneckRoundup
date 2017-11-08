@@ -7,21 +7,6 @@ public class SceneController_gameScene : MonoBehaviour {
 
 		public static  SceneController_gameScene instance;
 
-		private static  int adCountDown = 3;
-		public static   int AdCountDown{
-
-				get{
-						return adCountDown;
-				}
-				set{
-						if(value <= 0){
-								instance.ShowSimpleAd();
-								adCountDown = 3;
-						}else
-							adCountDown = value;
-				}
-		}
-
 		public int          obstacles_num = 2;
 		public GameObject[] obstacles_array;
 		public int          cow_num = 3;
@@ -108,26 +93,39 @@ public class SceneController_gameScene : MonoBehaviour {
 		public void GameOver(){
 
 				enabled = false;
-				StartCoroutine(GameOverPart2()); // wait for abduction
+				StartCoroutine(GameOverPart2());
 		}
 
 		IEnumerator GameOverPart2(){
 
-				yield return new WaitForSeconds(2.0f);
+				yield return new WaitForSeconds(2.0f); // wait for abduction
 
-				float highscore = float.Parse(BLINDED_SaveData.GetValue("playerBestTime", "0")) / 100.0f;
 
-				comp_gameOver.Show(TimerDisplay.MakeTimeString(time_duration), TimerDisplay.MakeTimeString(highscore), extra_Life != null);
+				// extra life
+				if(extra_Life != null){
 
-				if(time_duration > highscore){
-						BLINDED_SaveData.SetValue("playerBestTime", Mathf.FloorToInt(time_duration * 100.0f).ToString());
+					StartCoroutine(ExtraLife());
+
+				}else{
+
+					float highscore = float.Parse(BLINDED_SaveData.GetValue("playerBestTime", "0")) / 100.0f;
+
+					if(time_duration > highscore){
+							comp_gameOver.Show(TimerDisplay.MakeTimeString(time_duration), TimerDisplay.MakeTimeString(time_duration));
+
+							BLINDED_SaveData.SetValue("playerBestTime", Mathf.FloorToInt(time_duration * 100.0f).ToString());
+					}else
+							comp_gameOver.Show(TimerDisplay.MakeTimeString(time_duration), TimerDisplay.MakeTimeString(highscore));
+
 				}
 
 		}
 
 		IEnumerator ExtraLife(){
 
-				SpaceShip_controller.instance.transform.position = SpaceShip_controller.instance.startingPoint;
+				while((Vector2) SpaceShip_controller.instance.transform.position != (Vector2) SpaceShip_controller.instance.startingPoint){
+					yield return null;
+				}
 
 				extra_Life.SetActive(true);
 				extra_Life = null;
@@ -136,73 +134,14 @@ public class SceneController_gameScene : MonoBehaviour {
 
 				StartTheGamePlay();
 
-				AdCountDown = 3;
 		}
 
 		public void LoadScene_Index(int index){
 
 				SceneManager.LoadScene(index, LoadSceneMode.Single);
 
-				if(index == 1 && extra_Life != null)
-						AdCountDown--;
 
 		}
 
-		#region ads
-
-		#if UNITY_WEBGL
-
-		public void ShowSimpleAd(){
-				// blam
-		}
-
-		public void ShowRewardedAd()
-		{
-				StartCoroutine(ExtraLife());
-		}
-
-		#else
-
-
-		public void ShowSimpleAd()
-		{
-				if (Advertisement.IsReady("rewardedVideo"))
-				{
-						Advertisement.Show("video");
-				}
-		}
-
-		public void ShowRewardedAd()
-		{
-				if (Advertisement.IsReady("rewardedVideo"))
-				{
-						var options = new ShowOptions { resultCallback = HandleShowResult };
-						Advertisement.Show("rewardedVideo", options);
-				}
-		}
-
-		private void HandleShowResult(ShowResult result)
-		{
-				switch (result)
-				{
-				case ShowResult.Finished:
-						Debug.Log("The ad was successfully shown.");
-						//
-						// YOUR CODE TO REWARD THE GAMER
-						// Give coins etc.
-						StartCoroutine(ExtraLife());
-
-						break;
-				case ShowResult.Skipped:
-						Debug.Log("The ad was skipped before reaching the end.");
-						break;
-				case ShowResult.Failed:
-						Debug.LogError("The ad failed to be shown.");
-						break;
-				}
-		}
-
-		#endif
-
-		#endregion
+		
 }

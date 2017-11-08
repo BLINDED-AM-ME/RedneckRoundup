@@ -167,7 +167,6 @@ public class scr_godController : MonoBehaviour
 	public void RestartGame()
 	{
 		GameObject[] blockerArray = GameObject.FindGameObjectsWithTag("blocker");
-		GameObject[] tempArray = blockerArray;
 
 		foreach (GameObject blocker in blockerArray)
 		{

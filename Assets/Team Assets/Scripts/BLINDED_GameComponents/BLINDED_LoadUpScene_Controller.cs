@@ -4,17 +4,6 @@ using System.Collections;
 using System;
 using UnityEngine.SceneManagement;
 
-public class BLINDED_GameComponent : MonoBehaviour {
-	
-	public delegate void CallBack();
-
-	///<summary>Called in the Load up scene by LoadUpScene_Controller</summary>
-	public virtual void LoadUp_Init(CallBack callback){
-		
-	}
-	
-}
-
 public class BLINDED_LoadUpScene_Controller : MonoBehaviour {
 
 	public int targetFps = 60;
@@ -70,6 +59,21 @@ public class BLINDED_LoadUpScene_Controller : MonoBehaviour {
 		Destroy(this);
 
 		gameObject.name = "BLINDED_GameComponents";
+
+		loading_barMaterial.SetTextureOffset("_Stencil", new Vector2(0.5f,0));
+
+
 	}
 					
+}
+
+public class BLINDED_GameComponent : MonoBehaviour {
+
+	public delegate void CallBack();
+
+	///<summary>Called in the Load up scene by LoadUpScene_Controller</summary>
+	public virtual void LoadUp_Init(CallBack callback){
+
+	}
+
 }

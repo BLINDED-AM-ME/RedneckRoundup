@@ -22,7 +22,7 @@ public class ScreenshotHelper : MonoBehaviour {
 				}
 
 				if(Input.GetKeyDown("l")){
-						Application.CaptureScreenshot("Assets/ScreenShots/Screenshot" + take + ".png");
+						ScreenCapture.CaptureScreenshot("Assets/ScreenShots/Screenshot" + take + ".png");
 						take++;
 				}
 	

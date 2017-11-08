@@ -7,14 +7,17 @@ TextureImporter:
     21300000: ufo_body_0
     21300002: ufo_body_1
     21300004: ufo_body_2
-  serializedVersion: 2
+  externalObjects: {}
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -24,23 +27,22 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -48,17 +50,47 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings:
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   - buildTarget: WebGL
     maxTextureSize: 1024
-    textureFormat: -3
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: ufo_body_0
+    - serializedVersion: 2
+      name: ufo_body_0
       rect:
         serializedVersion: 2
         x: 0
@@ -68,34 +100,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 165, y: -29.5}
-        - {x: 165, y: 18.5}
-        - {x: 149, y: 45.5}
-        - {x: 117, y: 83.5}
-        - {x: 77, y: 95.5}
-        - {x: 27, y: 117.5}
-        - {x: 22, y: 118.5}
-        - {x: -27, y: 118.5}
-        - {x: -53, y: 107.5}
-        - {x: -80, y: 107.5}
-        - {x: -91, y: 91.5}
-        - {x: -144, y: 61.5}
-        - {x: -164, y: 25.5}
-        - {x: -166, y: 9.5}
-        - {x: -166, y: -22.5}
-        - {x: -164, y: -30.5}
-        - {x: -154, y: -53.5}
-        - {x: -139, y: -73.5}
-        - {x: -108, y: -99.5}
-        - {x: -53, y: -119.5}
-        - {x: -24, y: -122.5}
-        - {x: 20, y: -122.5}
-        - {x: 38, y: -121.5}
-        - {x: 82, y: -112.5}
-        - {x: 131, y: -83.5}
-        - {x: 155, y: -53.5}
-    - name: ufo_body_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ufo_body_1
       rect:
         serializedVersion: 2
         x: 368
@@ -105,34 +114,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 151.33334, y: -57.5}
-        - {x: 165.33334, y: -30.5}
-        - {x: 166.33334, y: -23.5}
-        - {x: 166.33334, y: 16.5}
-        - {x: 146.33334, y: 60.5}
-        - {x: 136.33334, y: 70.5}
-        - {x: 77.33334, y: 97.5}
-        - {x: 55.333344, y: 112.5}
-        - {x: 21.333344, y: 120.5}
-        - {x: -22.666656, y: 120.5}
-        - {x: -49.666656, y: 112.5}
-        - {x: -125.66666, y: 83.5}
-        - {x: -133.66666, y: 73.5}
-        - {x: -162.66666, y: 25.5}
-        - {x: -165.66666, y: 7.5}
-        - {x: -165.66666, y: -21.5}
-        - {x: -159.66666, y: -39.5}
-        - {x: -149.66666, y: -58.5}
-        - {x: -122.66666, y: -86.5}
-        - {x: -75.66666, y: -110.5}
-        - {x: -43.666656, y: -118.5}
-        - {x: -14.6666565, y: -120.5}
-        - {x: 20.333344, y: -120.5}
-        - {x: 49.333344, y: -116.5}
-        - {x: 81.33334, y: -109.5}
-        - {x: 126.33334, y: -84.5}
-    - name: ufo_body_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ufo_body_2
       rect:
         serializedVersion: 2
         x: 736
@@ -142,35 +128,12 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 166.66669, y: 16.5}
-        - {x: 158.66669, y: 43.5}
-        - {x: 152.66669, y: 51.5}
-        - {x: 91.66669, y: 99.5}
-        - {x: 43.666687, y: 111.5}
-        - {x: 24.666687, y: 119.5}
-        - {x: 17.666687, y: 120.5}
-        - {x: -25.333313, y: 120.5}
-        - {x: -67.33331, y: 101.5}
-        - {x: -105.33331, y: 95.5}
-        - {x: -163.33331, y: 31.5}
-        - {x: -164.33331, y: 12.5}
-        - {x: -164.33331, y: -28.5}
-        - {x: -158.33331, y: -46.5}
-        - {x: -124.33331, y: -85.5}
-        - {x: -96.33331, y: -100.5}
-        - {x: -68.33331, y: -111.5}
-        - {x: -42.333313, y: -116.5}
-        - {x: -30.333313, y: -118.5}
-        - {x: -21.333313, y: -119.5}
-        - {x: -17.333313, y: -120.5}
-        - {x: 21.666687, y: -120.5}
-        - {x: 71.66669, y: -115.5}
-        - {x: 128.66669, y: -86.5}
-        - {x: 165.66669, y: -40.5}
-        - {x: 166.66669, y: -31.5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
     outline: []
-  spritePackingTag: 
+    physicsShape: []
+  spritePackingTag: UFO
   userData: 
   assetBundleName: 
   assetBundleVariant: 

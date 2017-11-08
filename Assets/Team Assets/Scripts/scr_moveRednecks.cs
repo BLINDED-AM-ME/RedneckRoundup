@@ -12,9 +12,6 @@ public class scr_moveRednecks : MonoBehaviour
 	private bool isFollowingPath = false;
 	
 	private float speedControl = 0.06f;
-	private float spriteAlpha = 1.0f;
-	
-	private float test = 1.0f;
 
 	private List<Vector3> pathToFollow;
 
@@ -215,7 +212,7 @@ public class scr_moveRednecks : MonoBehaviour
 					if (transform.position == movePoint)
 					{
 						pathToFollow.Remove(pathToFollow[0]);
-						drawPath.SetVertexCount(pathToFollow.Count());
+						drawPath.positionCount = pathToFollow.Count();
 					}
 
 					if ((direction == "right") || (direction == "left"))
@@ -429,7 +426,7 @@ public class scr_moveRednecks : MonoBehaviour
 		if ((collision.gameObject.transform.tag == "blocker") || (collision.gameObject.transform.tag == "spr_barn"))
 		{
 			pathToFollow.Clear();
-			drawPath.SetVertexCount(pathToFollow.Count());
+			drawPath.positionCount = pathToFollow.Count();
 			
 //			drawPath = null;
 			Debug.Log("Check 1");
@@ -439,7 +436,7 @@ public class scr_moveRednecks : MonoBehaviour
 	void OnMouseDown()
 	{
 		pathToFollow.Clear();
-		drawPath.SetVertexCount(pathToFollow.Count());
+		drawPath.positionCount = pathToFollow.Count();
 
 //		drawPath = null;
 		Debug.Log("Check 2");
@@ -447,7 +444,7 @@ public class scr_moveRednecks : MonoBehaviour
 		if (pathToFollow.Count > 0)
 		{
 			ClearPath();
-			drawPath.SetVertexCount(pathToFollow.Count());
+			drawPath.positionCount = pathToFollow.Count();
 			
 //			drawPath = null;
 			Debug.Log("Check 3");

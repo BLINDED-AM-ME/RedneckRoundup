@@ -305,7 +305,7 @@ public class scr_moveRednecks_B : MonoBehaviour
 
 		// new
 		{
-			drawPath.SetVertexCount(pathToFollow.Count+1);
+			drawPath.positionCount = pathToFollow.Count+1;
 			drawPath.SetPosition(0, new Vector3(transform.position.x, transform.position.y, zPosition_lines));
 			for (int i=0; i<pathToFollow.Count; i++){
 				

@@ -1,4 +1,6 @@
-﻿Shader "Hidden/Blackout" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Hidden/Blackout" {
 	Properties {
 		_MainTex ("Screen Blended", 2D) = "" {}
 		_Overlay ("Color", 2D) = "grey" {}
@@ -22,7 +24,7 @@
 		
 	v2f vert( appdata_img v ) { 
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		
 		o.uv[0] = float2(
 			dot(v.texcoord.xy, _UV_Transform.xy),

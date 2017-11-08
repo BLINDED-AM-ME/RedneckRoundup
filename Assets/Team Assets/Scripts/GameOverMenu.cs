@@ -4,7 +4,6 @@ using System.Collections;
 
 public class GameOverMenu : MonoBehaviour {
 
-		public GameObject rootPanel_adOffer;
 		public GameObject rootPanel_noAd;
 		public Text[] text_currentTimes;
 		public Text[] text_bestTimes;
@@ -34,15 +33,12 @@ public class GameOverMenu : MonoBehaviour {
 		}
 
 
-		public void Show(string currentTime = "", string bestTime = "", bool offerAd = false){
+		public void Show(string currentTime = "", string bestTime = ""){
 
 				CurrentTime = currentTime;
 				BestTime    = bestTime;
 
-				if(offerAd)
-						rootPanel_adOffer.SetActive(true);
-				else
-						rootPanel_noAd.SetActive(true);
+				rootPanel_noAd.SetActive(true);
 		
 		}
 

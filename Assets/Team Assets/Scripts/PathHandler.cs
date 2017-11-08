@@ -33,7 +33,7 @@ public class PathHandler : MonoBehaviour {
 		void DrawPath(){
 
 
-				comp_lineRenderer.SetVertexCount(path.Count);
+				comp_lineRenderer.positionCount = path.Count;
 				comp_lineRenderer.SetPositions(path.ToArray());
 
 				temp_Vector = transform.position;
@@ -127,11 +127,10 @@ public class PathHandler : MonoBehaviour {
 				{
 						var t1 = path[i];
 						var t2 = path[i + 1];
-						if (t1 != null && t2 != null)
-						{
-								points_distances.Add(accumulateDistance);
-								accumulateDistance += (t1 - t2).magnitude;
-						}
+
+						points_distances.Add(accumulateDistance);
+						accumulateDistance += (t1 - t2).magnitude;
+						
 				}
 
 				points_distances.Add(accumulateDistance);
