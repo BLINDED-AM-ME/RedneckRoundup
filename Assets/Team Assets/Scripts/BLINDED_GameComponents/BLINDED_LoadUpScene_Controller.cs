@@ -19,12 +19,16 @@ public class BLINDED_LoadUpScene_Controller : MonoBehaviour {
 	IEnumerator Start () {
 
 		DontDestroyOnLoad(gameObject);
+
+		loading_barMaterial.SetTextureOffset("_Stencil", new Vector2(0.5f,0));
+
+		yield return new WaitForSeconds(2.0f);
+
 		Application.targetFrameRate = targetFps;
 
 		BLINDED_GameComponent[] comps = GetComponents<BLINDED_GameComponent>();
 
 		numberOfProcesses = comps.Length+1;
-		loading_barMaterial.SetTextureOffset("_Stencil", new Vector2(0.5f,0));
 
 		bool isBusy = true;
 		BLINDED_GameComponent.CallBack callback = delegate { 
