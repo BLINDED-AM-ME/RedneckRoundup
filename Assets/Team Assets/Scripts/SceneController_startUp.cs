@@ -1,30 +1,30 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class SceneController_startUp : MonoBehaviour {
 
-		public int targetFramerate = 30;
 
-		public Material loading_barMaterial;
-		public float    loading_progress = 0.0f;
+	public GameComponentManager manager;
 
-		// Use this for initialization
-		void Start () {
-				
-				Application.targetFrameRate = targetFramerate;
+	// Use this for initialization
+	IEnumerator Start () {
 
-		}
+
+		while(manager.PercentComplete < 100.0f)
+			yield return null;
 		
-		// Update is called once per frame
-		void Update () {
 
-				loading_barMaterial.SetTextureOffset("_Stencil", new Vector2(0.5f - loading_progress,0));
-				loading_progress += Time.deltaTime;
+		// Game Components are done Initializing
+			
+		yield return new WaitForSeconds(1.0f); 
 
-				if(loading_progress >= 1.0f)
-						SceneManager.LoadScene(1, LoadSceneMode.Single);
-		
-		}
+		SceneManager.LoadSceneAsync( 1, LoadSceneMode.Single);
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
 }

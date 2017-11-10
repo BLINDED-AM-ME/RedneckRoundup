@@ -108,12 +108,12 @@ public class SceneController_gameScene : MonoBehaviour {
 
 				}else{
 
-					float highscore = float.Parse(BLINDED_SaveData.GetValue("playerBestTime", "0")) / 100.0f;
+					float highscore = float.Parse(SaveDataGameComponent.GetValue("playerBestTime", "0")) / 100.0f;
 
 					if(time_duration > highscore){
 							comp_gameOver.Show(TimerDisplay.MakeTimeString(time_duration), TimerDisplay.MakeTimeString(time_duration));
 
-							BLINDED_SaveData.SetValue("playerBestTime", Mathf.FloorToInt(time_duration * 100.0f).ToString());
+							SaveDataGameComponent.SetValue("playerBestTime", Mathf.FloorToInt(time_duration * 100.0f).ToString());
 					}else
 							comp_gameOver.Show(TimerDisplay.MakeTimeString(time_duration), TimerDisplay.MakeTimeString(highscore));
 
